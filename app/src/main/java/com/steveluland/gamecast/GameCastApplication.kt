@@ -1,4 +1,7 @@
 package com.steveluland.gamecast
 
-class GameCastApplication {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class GameCastApplication : Application()

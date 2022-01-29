@@ -6,15 +6,15 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
 
-class LiveCharacterListRepositoryTest {
+class CharacterListRepositoryTest {
 
     private lateinit var fakeCharacterListAPI: FakeCharacterListAPI
-    private lateinit var sut: LiveCharacterListRepository
+    private lateinit var sut: CharacterListRepository
 
     @Before
     fun setUp() {
         fakeCharacterListAPI = FakeCharacterListAPI()
-        sut = LiveCharacterListRepository(fakeCharacterListAPI)
+        sut = CharacterListRepository(fakeCharacterListAPI)
     }
 
     @Test

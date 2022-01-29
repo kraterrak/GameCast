@@ -1,8 +1,9 @@
 package com.steveluland.gamecast.characterlist
 
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import javax.inject.Inject
 
-class CharacterListRepository constructor(
+class CharacterListRepository @Inject constructor(
     private val characterListAPI: CharacterListAPI,
 ) : ICharacterListRepository {
 

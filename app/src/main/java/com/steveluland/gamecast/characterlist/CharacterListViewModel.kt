@@ -4,12 +4,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.steveluland.gamecast.characterlist.CharacterListState.*
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import java.lang.Exception
+import javax.inject.Inject
 
-class CharacterListViewModel constructor(
+@HiltViewModel
+class CharacterListViewModel @Inject constructor(
     private val characterListRepository: ICharacterListRepository,
 ) : ViewModel() {
 

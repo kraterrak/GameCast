@@ -1,11 +1,12 @@
 package com.steveluland.gamecast.characterlist
 
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import com.steveluland.gamecast.core.network.GBResponse
 
 class MockCharacterListAPI : CharacterListAPI {
 
-    override suspend fun fetchCharacterList(): List<CharacterIndex> {
-        return listOf(FAKE_MARIO, FAKE_SONIC, FAKE_MEGA_MAN)
+    override suspend fun fetchCharacterList(fieldList: String): GBResponse<List<CharacterIndex>> {
+        return GBResponse(listOf(FAKE_MARIO, FAKE_SONIC, FAKE_MEGA_MAN))
     }
 
     companion object {

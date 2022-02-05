@@ -16,7 +16,7 @@ class RetrofitModule {
     fun provideRetrofitInstance(client: OkHttpClient): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("https://www.giantbomb.com/api")
+            .baseUrl("https://www.giantbomb.com/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

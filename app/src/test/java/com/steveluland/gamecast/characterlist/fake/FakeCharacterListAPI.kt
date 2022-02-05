@@ -2,6 +2,7 @@ package com.steveluland.gamecast.characterlist.fake
 
 import com.steveluland.gamecast.characterlist.CharacterListAPI
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import com.steveluland.gamecast.core.network.GBResponse
 
 class FakeCharacterListAPI : CharacterListAPI {
 
@@ -11,5 +12,5 @@ class FakeCharacterListAPI : CharacterListAPI {
         characterList = newCharacterList
     }
 
-    override suspend fun fetchCharacterList(): List<CharacterIndex> = characterList
+    override suspend fun fetchCharacterList(): GBResponse<List<CharacterIndex>> = GBResponse(characterList)
 }

@@ -8,5 +8,5 @@ class CharacterListRepository @Inject constructor(
 ) : ICharacterListRepository {
 
     override suspend fun fetchCharacterList() : List<CharacterIndex> =
-        characterListAPI.fetchCharacterList()
+        characterListAPI.fetchCharacterList().results
 }

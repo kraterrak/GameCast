@@ -5,7 +5,7 @@ import com.steveluland.gamecast.characterlist.model.CharacterIndex
 class MockCharacterListAPI : CharacterListAPI {
 
     override suspend fun fetchCharacterList(): List<CharacterIndex> {
-        return listOf(FAKE_MARIO, FAKE_MEGA_MAN, FAKE_SONIC)
+        return listOf(FAKE_MARIO, FAKE_SONIC, FAKE_MEGA_MAN)
     }
 
     companion object {

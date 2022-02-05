@@ -1,9 +1,10 @@
-package com.steveluland.gamecast.characterlist
+package com.steveluland.gamecast.characterlist.fake
 
+import com.steveluland.gamecast.characterlist.ICharacterListRepository
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 import java.lang.Exception
 
-class FakeUICharacterListRepository : ICharacterListRepository {
+class FakeCharacterListRepository : ICharacterListRepository {
 
     private var characterList : List<CharacterIndex> = emptyList()
     private var exception : Exception? = null

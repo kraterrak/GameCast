@@ -4,15 +4,13 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import com.steveluland.gamecast.characterlist.uifake.FakeCharacterListRepository
 import com.steveluland.gamecast.ui.theme.GameCastTheme
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-
-import javax.inject.Inject
 
 @HiltAndroidTest
 class CharacterListActivityTest {
@@ -24,12 +22,7 @@ class CharacterListActivityTest {
     val composeTestRule = createAndroidComposeRule<CharacterListActivity>()
 
     @BindValue
-    val fakeCharacterListRepository = FakeUICharacterListRepository()
-
-    @Before
-    fun setUp() {
-        hiltRule.inject()
-    }
+    val fakeCharacterListRepository = FakeCharacterListRepository()
 
     @Test
     fun contactListAvailable_characterListShown() {

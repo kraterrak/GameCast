@@ -1,5 +1,6 @@
-package com.steveluland.gamecast.characterlist
+package com.steveluland.gamecast.characterlist.fake
 
+import com.steveluland.gamecast.characterlist.CharacterListAPI
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 
 class FakeCharacterListAPI : CharacterListAPI {

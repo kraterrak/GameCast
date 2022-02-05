@@ -1,5 +1,6 @@
-package com.steveluland.gamecast.characterlist
+package com.steveluland.gamecast.characterlist.uifake
 
+import com.steveluland.gamecast.characterlist.ICharacterListRepository
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 import java.lang.Exception
 

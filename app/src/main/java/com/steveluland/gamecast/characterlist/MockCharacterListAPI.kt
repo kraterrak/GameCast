@@ -1,7 +1,6 @@
 package com.steveluland.gamecast.characterlist
 
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
-import com.steveluland.gamecast.core.network.GBResponse
 
 class MockCharacterListAPI : CharacterListAPI {
 

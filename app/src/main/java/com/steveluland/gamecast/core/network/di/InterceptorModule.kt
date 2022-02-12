@@ -2,6 +2,7 @@ package com.steveluland.gamecast.core.network.di
 
 import com.steveluland.gamecast.core.network.interceptor.AuthenticationInterceptor
 import com.steveluland.gamecast.core.network.interceptor.FormatInterceptor
+import com.steveluland.gamecast.core.network.interceptor.ResponseBodyInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,14 +14,13 @@ import okhttp3.logging.HttpLoggingInterceptor
 class InterceptorModule {
 
     @Provides
-    fun provideAuthenticationInterceptor(): AuthenticationInterceptor {
-        return AuthenticationInterceptor()
-    }
+    fun provideAuthenticationInterceptor() = AuthenticationInterceptor()
 
     @Provides
-    fun provideFormatInterceptor(): FormatInterceptor {
-        return FormatInterceptor()
-    }
+    fun provideFormatInterceptor() = FormatInterceptor()
+
+    @Provides
+    fun provideResponseBodyInterceptor() = ResponseBodyInterceptor()
 
     @Provides
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {

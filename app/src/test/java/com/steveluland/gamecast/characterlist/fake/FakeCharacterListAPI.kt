@@ -12,5 +12,5 @@ class FakeCharacterListAPI : CharacterListAPI {
         characterList = newCharacterList
     }
 
-    override suspend fun fetchCharacterList(fieldList: String): GBResponse<List<CharacterIndex>> = GBResponse(characterList)
+    override suspend fun fetchCharacterList(fieldList: String): List<CharacterIndex> = characterList
 }

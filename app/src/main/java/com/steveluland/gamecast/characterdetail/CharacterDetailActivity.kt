@@ -20,6 +20,9 @@ class CharacterDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCharacterDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        viewModel.getCharacterDetails("1")
 
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {

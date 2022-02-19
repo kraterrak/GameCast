@@ -1,5 +1,6 @@
 package com.steveluland.gamecast.characterlist
 
+import com.steveluland.gamecast.characterlist.data.CharacterListAPI
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import okhttp3.OkHttpClient

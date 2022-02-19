@@ -13,19 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GameCast">
         <activity
-            android:name=".characterdetail.CharacterDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".characterlist.CharacterListActivity"
+            android:name=".GameCastActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.GameCast.NoActionBar">
+            android:label="@string/activity_name_game_cast"
+            android:theme="@style/Theme.GameCast" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".characterdetail.CharacterDetailActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

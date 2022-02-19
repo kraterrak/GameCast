@@ -4,6 +4,8 @@ import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
 import com.steveluland.gamecast.characterlist.fake.FakeCharacterListRepository
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import com.steveluland.gamecast.characterlist.ui.CharacterListState
+import com.steveluland.gamecast.characterlist.ui.CharacterListViewModel
 import com.steveluland.gamecast.rules.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GameCast</string>
+    <string name="activity_name_game_cast">GameCast</string>
 </resources>

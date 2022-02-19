@@ -13,13 +13,13 @@ import org.junit.Rule
 import org.junit.Test
 
 @HiltAndroidTest
-class CharacterListActivityTest {
+class CharacterListScreenTest {
 
     @get:Rule(order = 1)
     var hiltRule = HiltAndroidRule(this)
 
     @get:Rule(order = 2)
-    val composeTestRule = createAndroidComposeRule<CharacterListActivity>()
+    val composeTestRule = createAndroidComposeRule<CharacterListScreen>()
 
     @BindValue
     val fakeCharacterListRepository = FakeCharacterListRepository()

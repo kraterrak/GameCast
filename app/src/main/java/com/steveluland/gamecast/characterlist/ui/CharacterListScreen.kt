@@ -1,38 +1,16 @@
-package com.steveluland.gamecast.characterlist
+package com.steveluland.gamecast.characterlist.ui
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 import com.steveluland.gamecast.ui.theme.GameCastTheme
-import dagger.hilt.android.AndroidEntryPoint
-
-@AndroidEntryPoint
-class CharacterListActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            GameCastTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    CharacterListScreen()
-                }
-            }
-        }
-    }
-}
 
 @Composable
-fun CharacterListScreen(viewModel: CharacterListViewModel = viewModel()) {
+fun CharacterListScreen(viewModel: CharacterListViewModel = hiltViewModel()) {
 
     val uiState = viewModel.characterListState.collectAsState().value
 

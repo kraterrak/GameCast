@@ -1,4 +1,4 @@
-package com.steveluland.gamecast.characterlist
+package com.steveluland.gamecast.characterlist.data
 
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 import retrofit2.http.GET

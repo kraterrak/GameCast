@@ -1,6 +1,7 @@
 package com.steveluland.gamecast.characterlist
 
 import com.google.common.truth.Truth.assertThat
+import com.steveluland.gamecast.characterlist.data.CharacterListRepository
 import com.steveluland.gamecast.characterlist.fake.FakeCharacterListAPI
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 import kotlinx.coroutines.runBlocking

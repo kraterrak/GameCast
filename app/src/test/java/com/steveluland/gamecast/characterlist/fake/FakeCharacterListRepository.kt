@@ -1,6 +1,6 @@
 package com.steveluland.gamecast.characterlist.fake
 
-import com.steveluland.gamecast.characterlist.ICharacterListRepository
+import com.steveluland.gamecast.characterlist.data.ICharacterListRepository
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
 import java.lang.Exception
 

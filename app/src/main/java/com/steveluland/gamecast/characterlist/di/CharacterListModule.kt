@@ -1,8 +1,8 @@
 package com.steveluland.gamecast.characterlist.di
 
-import com.steveluland.gamecast.characterlist.CharacterListAPI
-import com.steveluland.gamecast.characterlist.CharacterListRepository
-import com.steveluland.gamecast.characterlist.ICharacterListRepository
+import com.steveluland.gamecast.characterlist.data.CharacterListAPI
+import com.steveluland.gamecast.characterlist.data.CharacterListRepository
+import com.steveluland.gamecast.characterlist.data.ICharacterListRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

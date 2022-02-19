@@ -11,17 +11,22 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.steveluland.gamecast.characterdetail.model.CharacterDetail
+import com.steveluland.gamecast.ui.error.ErrorScreen
 import com.steveluland.gamecast.ui.theme.GameCastTheme
 
 @Composable
-fun CharacterDetailScreen(guid: String, viewModel: CharacterDetailViewModel = hiltViewModel()) {
+fun CharacterDetailScreen(guid: String?, viewModel: CharacterDetailViewModel = hiltViewModel()) {
     val uiState = viewModel.characterDetailState.collectAsState().value
 
-    viewModel.getCharacterDetails(guid)
+    guid?.let {
+        viewModel.getCharacterDetails(it)
 
-    when(uiState) {
-        is CharacterDetailState.Success -> CharacterDetail(uiState.characterDetail)
-        CharacterDetailState.Error -> {}
+        when(uiState) {
+            is CharacterDetailState.Success -> CharacterDetail(uiState.characterDetail)
+            CharacterDetailState.Error -> ErrorScreen(
+                text = "We couldn't fetch your character's information right now, please check your internet connection and try again."
+            ) { viewModel.getCharacterDetails(guid) }
+        }
     }
 }
 

@@ -32,7 +32,7 @@ class CharacterListScreenTest {
 
         composeTestRule.setContent {
             GameCastTheme {
-                CharacterListScreen()
+                CharacterListScreen { }
             }
         }
 

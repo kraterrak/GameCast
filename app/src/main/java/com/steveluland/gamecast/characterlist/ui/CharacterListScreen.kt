@@ -1,7 +1,5 @@
 package com.steveluland.gamecast.characterlist.ui
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -32,7 +30,7 @@ fun CharacterListScreen(
         is CharacterListState.Success -> CharacterList(uiState.characterList, onCharacterItemClicked)
         CharacterListState.Error -> ErrorScreen(
             text = "We couldn't fetch the list of characters right now, please check your internet connection and try again."
-        ) { }
+        ) { viewModel.refreshCharacterList() }
     }
 }
 

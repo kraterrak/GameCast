@@ -3,7 +3,9 @@ package com.steveluland.gamecast.characterlist
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import com.steveluland.gamecast.GameCastActivity
 import com.steveluland.gamecast.characterlist.model.CharacterIndex
+import com.steveluland.gamecast.characterlist.ui.CharacterListScreen
 import com.steveluland.gamecast.characterlist.uifake.FakeCharacterListRepository
 import com.steveluland.gamecast.ui.theme.GameCastTheme
 import dagger.hilt.android.testing.BindValue
@@ -19,7 +21,7 @@ class CharacterListScreenTest {
     var hiltRule = HiltAndroidRule(this)
 
     @get:Rule(order = 2)
-    val composeTestRule = createAndroidComposeRule<CharacterListScreen>()
+    val composeTestRule = createAndroidComposeRule<GameCastActivity>()
 
     @BindValue
     val fakeCharacterListRepository = FakeCharacterListRepository()

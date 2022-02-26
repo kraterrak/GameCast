@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,7 +25,9 @@ fun CharacterListScreen(
 ) {
     val uiState = viewModel.characterListState.collectAsState().value
 
-    viewModel.refreshCharacterList()
+    LaunchedEffect(Unit) {
+        viewModel.refreshCharacterList()
+    }
 
     when(uiState) {
         is CharacterListState.Success -> CharacterList(uiState.characterList, onCharacterItemClicked)

@@ -13,9 +13,9 @@ class ResponseBodyInterceptor : Interceptor {
 
         return response.body?.let { responseBody ->
             val jsonObject = JSONObject(responseBody.string())
-            val resultsArray = jsonObject.getJSONArray("results")
+            val resultsObject = jsonObject.get("results")
             val contentType = responseBody.contentType()
-            val newBody = resultsArray.toString().toResponseBody(contentType)
+            val newBody = resultsObject.toString().toResponseBody(contentType)
             response.newBuilder().body(newBody).build()
         } ?: response
     }

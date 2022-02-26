@@ -7,5 +7,5 @@ import retrofit2.http.Path
 interface CharacterDetailAPI {
 
     @GET("character/{guid}")
-    fun fetchCharacterDetail(@Path("guid") guid: String) : CharacterDetail
+    suspend fun fetchCharacterDetail(@Path("guid") guid: String) : CharacterDetail
 }
